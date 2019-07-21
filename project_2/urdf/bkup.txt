@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+	<robot name="Robot2">
+	    <link name="vehiclebase">
+	      <visual>
+		<geometry>
+		  <box size="0.2 0.3 0.05"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.1"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+	    
+<!-- vehicle base complete `````````````````````````````````````````````````````````````````````` -->
+
+	    <link name="wheelbase_1">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.05"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0.1 0.1 0.10"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_holder_1">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.1"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.05"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_1">
+	      <visual>
+		<geometry>
+		  <cylinder length="0.05" radius="0.05"/>
+		</geometry>
+		<origin rpy="0 1.57 0" xyz="0 0 0"/>
+		<material name="black">
+		  <color rgba="0 0 0 1"/>
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="wheelholder_to_wheel1" type="fixed">
+	      <parent link="wheel_holder_1" />
+	      <child link="wheel_1" />
+	      <origin xyz="0 0 0" />
+		<axis xyz="0 0 1" />
+	    </joint>
+
+	    <joint name="wheelbase_to_wheel1" type="continuous">
+	      <parent link="wheelbase_1" />
+	      <child link="wheel_holder_1" />
+	      <origin xyz="0.1 0.1 0" />
+	      <axis xyz="0 0 1" />
+	    </joint>
+
+<!-- wheel 1 complete `````````````````````````````````````````````````````````````````````` -->
+
+	    <link name="wheelbase_2">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.05"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="-0.1 0.1 0.10"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_holder_2">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.1"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.05"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_2">
+	      <visual>
+		<geometry>
+		  <cylinder length="0.05" radius="0.05"/>
+		</geometry>
+		<origin rpy="0 1.57 0" xyz="0 0 0"/>
+		<material name="black">
+		  <color rgba="0 0 0 1"/>
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="wheelholder_to_wheel2" type="fixed">
+	      <parent link="wheel_holder_2" />
+	      <child link="wheel_2" />
+	      <origin xyz="0 0 0" />
+		<axis xyz="0 0 1" />
+	    </joint>
+
+	    <joint name="wheelbase_to_wheel2" type="continuous">
+	      <parent link="wheelbase_2" />
+	      <child link="wheel_holder_2" />
+	      <origin xyz="-0.1 0.1 0" />
+	      <axis xyz="0 0 1" />
+	    </joint>
+
+<!-- wheel 2 complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="wheelbase_3">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.05"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0.1 -0.1 0.10"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_holder_3">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.1"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.05"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_3">
+	      <visual>
+		<geometry>
+		  <cylinder length="0.05" radius="0.05"/>
+		</geometry>
+		<origin rpy="0 1.57 0" xyz="0 0 0"/>
+		<material name="black">
+		  <color rgba="0 0 0 1"/>
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="wheelholder_to_wheel3" type="fixed">
+	      <parent link="wheel_holder_3" />
+	      <child link="wheel_3" />
+	      <origin xyz="0 0 0" />
+		<axis xyz="0 0 1" />
+	    </joint>
+
+	    <joint name="wheelbase_to_wheel3" type="continuous">
+	      <parent link="wheelbase_3" />
+	      <child link="wheel_holder_3" />
+	      <origin xyz="0.1 -0.1 0" />
+	      <axis xyz="0 0 1" />
+	    </joint>
+
+<!-- wheel 3 complete `````````````````````````````````````````````````````````````````````` -->
+
+	    <link name="wheelbase_4">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.05"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="-0.1 -0.1 0.10"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_holder_4">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.05 0.1"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.05"/>
+		<material name="white">
+		  <color rgba="1 1 1 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <link name="wheel_4">
+	      <visual>
+		<geometry>
+		  <cylinder length="0.05" radius="0.05"/>
+		</geometry>
+		<origin rpy="0 1.57 0" xyz="0 0 0"/>
+		<material name="black">
+		  <color rgba="0 0 0 1"/>
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="wheelholder_to_wheel4" type="fixed">
+	      <parent link="wheel_holder_4" />
+	      <child link="wheel_4" />
+	      <origin xyz="0 0 0" />
+		<axis xyz="0 0 1" />
+	    </joint>
+
+	    <joint name="wheelbase_to_wheel4" type="continuous">
+	      <parent link="wheelbase_4" />
+	      <child link="wheel_holder_4" />
+	      <origin xyz="-0.1 -0.1 0" />
+	      <axis xyz="0 0 1" />
+	    </joint>
+
+<!-- wheel 4 complete `````````````````````````````````````````````````````````````````````` -->
+
+	    <joint name="vehiclebase_to_wheel1" type="fixed">
+	      <parent link="vehiclebase" />
+	      <child link="wheelbase_1" />
+	      <origin xyz="0 0 0" />
+	    </joint>
+
+	    <joint name="vehiclebase_to_wheel2" type="fixed">
+	      <parent link="vehiclebase" />
+	      <child link="wheelbase_2" />
+	      <origin xyz="0 0 0" />
+	    </joint>
+	    <joint name="vehiclebase_to_wheel3" type="fixed">
+	      <parent link="vehiclebase" />
+	      <child link="wheelbase_3" />
+	      <origin xyz="0 0 0" />
+	    </joint>
+
+	    <joint name="vehiclebase_to_wheel4" type="fixed">
+	      <parent link="vehiclebase" />
+	      <child link="wheelbase_4" />
+	      <origin xyz="0 0 0" />
+	    </joint>
+
+<!-- joint wheels complete `````````````````````````````````````````````````````````````````````` -->
+
+	    <link name="armbase">
+	      <visual>
+		<geometry>
+		  <box size="0.035 0.05 0.01"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.03"/>
+		<material name="red">
+		  <color rgba="255 0 0 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="vehiclebase_to_armbase" type="continuous">
+	      <parent link="vehiclebase" />
+	      <child link="armbase" />
+	      <origin xyz="0 0.09 0.1" />
+	      <axis xyz="0 0 1" />
+	    </joint>
+<!-- armbase complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="armstand">
+	      <visual>
+		<geometry>
+		  <cylinder length="0.06" radius="0.015"/>  
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.03"/>
+		<material name="yellow">
+		  <color rgba="255 165 0 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="armbase_to_armstand" type="fixed">
+	      <parent link="armbase" />
+	      <child link="armstand" />
+	      <origin xyz="0 0 0" />
+	    </joint>
+<!-- armstand complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="arm_1">
+	      <visual>
+		<geometry>
+		  <box size="0.017 0.017 0.2"/>   
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.1"/>
+		<material name="blue">
+		  <color rgba="0 0 255 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="armstand_to_arm_1" type="revolute">
+	      <parent link="armstand" />
+	      <child link="arm_1" />
+	      <origin xyz="0 0 0.05" />
+              <axis xyz="1 0 0"/>
+	      <limit effort ="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/>
+	    </joint>
+<!-- arm 1 complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="arm_2">
+	      <visual>
+		<geometry>
+		  <box size="0.017 0.017 0.2"/>   
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0.09"/>
+		<material name="green">
+		  <color rgba="0 255 0 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="arm_1_to_arm_2" type="revolute">
+	      <parent link="arm_1" />
+	      <child link="arm_2" />
+	      <origin xyz="0 0 0.2" />
+              <axis xyz="1 0 0"/>
+	      <limit effort ="1000.0" lower="-2.8" upper="2.8" velocity="0.5"/>
+	    </joint>
+<!-- arm 2 complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="gripper_socket">
+	      <visual>
+		<geometry>
+		  <cylinder length="0.01" radius="0.01"/>   
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0"/>
+		<material name="pink">
+		  <color rgba="255 0 255 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="arm_2_to_gripperbase" type="continuous">
+	      <parent link="arm_2" />
+	      <child link="gripper_socket" />
+	      <origin xyz="0 0 0.19" />
+              <axis xyz="0 0 1"/>
+            </joint>
+<!-- gripper socket complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="gripper_base">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.017 0.01"/>   
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0 0 0"/>
+		<material name="orange">
+		  <color rgba="211 84 0 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="gripper_socket_to_gripperbase" type="fixed">
+	      <parent link="gripper_socket" />
+	      <child link="gripper_base" />
+	      <origin xyz="0 0 0" />
+            </joint>
+<!-- gripper base complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="gripper_1">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.01 0.01"/>   
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0.025 0 0"/>
+		<material name="red">
+		  <color rgba="255 0 0 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="gripperbase_to_gripper1" type="revolute">
+	      <parent link="gripper_base" />
+	      <child link="gripper_1" />
+	      <origin xyz="0.025 0 0" rpy="0 -1.57 0"/>
+              <axis xyz="0 1 0"/>
+	      <limit effort ="1000.0" lower="-0.46" upper="1.574" velocity="0.5"/>
+            </joint>
+<!-- gripper 1 complete `````````````````````````````````````````````````````````````````````` -->
+	    <link name="gripper_2">
+	      <visual>
+		<geometry>
+		  <box size="0.05 0.01 0.01"/>   
+		</geometry>  
+		<origin rpy="0 0 0" xyz="0.025 0 0 "/>
+		<material name="blue">
+		  <color rgba="0 0 255 1"/>  
+		</material>
+	      </visual>
+	    </link>
+
+	    <joint name="gripperbase_to_gripper2" type="revolute">
+	      <parent link="gripper_base" />
+	      <child link="gripper_2" />
+	      <origin xyz="-0.025 0 0" rpy="0 -1.57 0"/>
+              <axis xyz="0 1 0"/>
+	      <limit effort ="1000.0" lower="0.46" upper="-1.574" velocity="0.5"/>
+            </joint>
+<!-- gripper 2 complete `````````````````````````````````````````````````````````````````````` -->
+	</robot>

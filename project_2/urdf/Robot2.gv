@@ -1,0 +1,68 @@
+digraph G {
+node [shape=box];
+"vehiclebase" [label="vehiclebase"];
+"armbase" [label="armbase"];
+"armstand" [label="armstand"];
+"arm_1" [label="arm_1"];
+"arm_1_support" [label="arm_1_support"];
+"arm_2" [label="arm_2"];
+"gripper_socket" [label="gripper_socket"];
+"gripper_base" [label="gripper_base"];
+"gripper_1" [label="gripper_1"];
+"gripper_2" [label="gripper_2"];
+"wheelbase_1" [label="wheelbase_1"];
+"wheel_holder_1" [label="wheel_holder_1"];
+"wheel_1" [label="wheel_1"];
+"wheelbase_2" [label="wheelbase_2"];
+"wheel_holder_2" [label="wheel_holder_2"];
+"wheel_2" [label="wheel_2"];
+"wheelbase_3" [label="wheelbase_3"];
+"wheel_holder_3" [label="wheel_holder_3"];
+"wheel_3" [label="wheel_3"];
+"wheelbase_4" [label="wheelbase_4"];
+"wheel_holder_4" [label="wheel_holder_4"];
+"wheel_4" [label="wheel_4"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"vehiclebase" -> "vehiclebase_to_armbase" [label="xyz: 0 0.09 0.1 \nrpy: 0 -0 0"]
+"vehiclebase_to_armbase" -> "armbase"
+"armbase" -> "armbase_to_armstand" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"armbase_to_armstand" -> "armstand"
+"armstand" -> "armstand_to_arm_1" [label="xyz: 0 0 0.05 \nrpy: 0 -0 0"]
+"armstand_to_arm_1" -> "arm_1"
+"arm_1" -> "arm_1_to_arm_support" [label="xyz: 0 0.01 0.2 \nrpy: 0 -0 0"]
+"arm_1_to_arm_support" -> "arm_1_support"
+"arm_1_support" -> "arm_1_to_arm_2" [label="xyz: 0 0.01 0 \nrpy: 0 -0 0"]
+"arm_1_to_arm_2" -> "arm_2"
+"arm_2" -> "arm_2_to_gripperbase" [label="xyz: 0 0 0.19 \nrpy: 0 -0 0"]
+"arm_2_to_gripperbase" -> "gripper_socket"
+"gripper_socket" -> "gripper_socket_to_gripperbase" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"gripper_socket_to_gripperbase" -> "gripper_base"
+"gripper_base" -> "gripperbase_to_gripper1" [label="xyz: 0.025 0 0 \nrpy: 0 -1.5708 0"]
+"gripperbase_to_gripper1" -> "gripper_1"
+"gripper_base" -> "gripperbase_to_gripper2" [label="xyz: -0.025 0 0 \nrpy: 0 -1.5708 0"]
+"gripperbase_to_gripper2" -> "gripper_2"
+"vehiclebase" -> "vehiclebase_to_wheel1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"vehiclebase_to_wheel1" -> "wheelbase_1"
+"wheelbase_1" -> "wheelbase_to_wheel1" [label="xyz: 0.1 0.1 0 \nrpy: 0 -0 0"]
+"wheelbase_to_wheel1" -> "wheel_holder_1"
+"wheel_holder_1" -> "wheelholder_to_wheel1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"wheelholder_to_wheel1" -> "wheel_1"
+"vehiclebase" -> "vehiclebase_to_wheel2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"vehiclebase_to_wheel2" -> "wheelbase_2"
+"wheelbase_2" -> "wheelbase_to_wheel2" [label="xyz: -0.1 0.1 0 \nrpy: 0 -0 0"]
+"wheelbase_to_wheel2" -> "wheel_holder_2"
+"wheel_holder_2" -> "wheelholder_to_wheel2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"wheelholder_to_wheel2" -> "wheel_2"
+"vehiclebase" -> "vehiclebase_to_wheel3" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"vehiclebase_to_wheel3" -> "wheelbase_3"
+"wheelbase_3" -> "wheelbase_to_wheel3" [label="xyz: 0.1 -0.1 0 \nrpy: 0 -0 0"]
+"wheelbase_to_wheel3" -> "wheel_holder_3"
+"wheel_holder_3" -> "wheelholder_to_wheel3" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"wheelholder_to_wheel3" -> "wheel_3"
+"vehiclebase" -> "vehiclebase_to_wheel4" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"vehiclebase_to_wheel4" -> "wheelbase_4"
+"wheelbase_4" -> "wheelbase_to_wheel4" [label="xyz: -0.1 -0.1 0 \nrpy: 0 -0 0"]
+"wheelbase_to_wheel4" -> "wheel_holder_4"
+"wheel_holder_4" -> "wheelholder_to_wheel4" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"wheelholder_to_wheel4" -> "wheel_4"
+}

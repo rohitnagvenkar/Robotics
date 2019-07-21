@@ -1,0 +1,16 @@
+roslaunch project_1 display.launch model:="`rospack find project_1`/urdf/robot1.urdf"
+
+roslaunch project_1 display.launch model:="`rospack find project_1`/urdf/robot1.urdf" gui:=true
+
+catkin_create_pkg project_1 rospy
+
+urdf_to_graphiz robot2.urdf
+
+check_urdf robot2.urdf
+
+rosrun urdf_to_graphiz "`rospack find project_2`/urdf/robot2.urdf"
+
+roslaunch project_2 gazebo.launch model:="`rospack find project_2`/urdf/robot2.urdf"
+
+
+roslaunch project_2 move_display.launch model:="`rospack find project_2`/urdf/robot2.urdf"
